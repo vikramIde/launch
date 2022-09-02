@@ -99,9 +99,9 @@ hid-noded gentx <key-name> 1000000000000uhid \
 - Run `ifconfig` or `curl ipinfo.io/ip` and copy your publicly reachable IP address.
 - Form the complete node address in the format: `<node-id>@<publicly-reachable-ip>:<p2p-port>`. Example: `31a2699a153e60fcdbed8a47e060c1e1d4751616@192.168.29.209:26656`. Note: The default P2P port is 26656. If you want to change the port configuration, open `${HOME}/.hid-node/config/config.toml` and under `[p2p]`, change the port in `laddr` attribute.
 - Create a file `peers-<validator-name>.txt` under the `testnet/jagrat/peers` directory in the forked repo and paste the complete node address from the last step into the file.
-- Create a Pull Request to the `master` branch of the [repository](https://github.com/hypersign-protocol/launch)
+- Create a Pull Request to the `main` branch of the [repository](https://github.com/hypersign-protocol/launch)
 >**NOTE:** Pull Request will be merged by the maintainers to confirm the inclusion of the validator at the genesis. The final genesis file will be published under the file `testnet/jagrat/final_genesis.json`.
-- Once the `final_genesis.json` file is published, replace the contents of your `${HOME}/.hid-node/config/genesis.json` with that of `testnet/jagrat/final_genesis.json`.
+- Once the `final_genesis.json` file is published, replace the contents of your `${HOME}/.hid-node/config/genesis.json` with `testnet/jagrat/final_genesis.json`.
 - Add `persistent_peers` or `seeds` in `${HOME}/.hid-node/config/config.toml` from `testnet/jagrat/final_peers.json`.
 - Set the `minimum-gas-price` in `${HOME}/.hid-node/config/app.toml`. Example value: `10uhid` 
 - Start node
