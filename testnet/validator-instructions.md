@@ -1,4 +1,4 @@
-# Setting up a Validator Node for Jagrat Devnet`
+# Setting up a Validator Node for Jagrat Devnet
 
 > **Note**: This steps suggested in this document are tentative and subject to change.
 
@@ -69,6 +69,10 @@ cat $HOME/.hid-node/config/genesis.json | jq '.app_state["gov"]["deposit_params"
 cat $HOME/.hid-node/config/genesis.json | jq '.app_state["mint"]["params"]["mint_denom"]="uhid"' > $HOME/.hid-node/config/tmp_genesis.json && mv $HOME/.hid-node/config/tmp_genesis.json $HOME/.hid-node/config/genesis.json
 
 cat $HOME/.hid-node/config/genesis.json | jq '.app_state["staking"]["params"]["bond_denom"]="uhid"' > $HOME/.hid-node/config/tmp_genesis.json && mv $HOME/.hid-node/config/tmp_genesis.json $HOME/.hid-node/config/genesis.json
+```
+- Specify the chain namespace by running the following command
+```
+cat $HOME/.hid-node/config/genesis.json | jq '.app_state["ssi"]["chain_namespace"]="jagrat"' > $HOME/.hid-node/config/tmp_genesis.json && mv $HOME/.hid-node/config/tmp_genesis.json $HOME/.hid-node/config/genesis.json
 ```
 - Create a gentx transaction
 ```
