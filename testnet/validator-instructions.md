@@ -74,9 +74,12 @@ cat $HOME/.hid-node/config/genesis.json | jq '.app_state["staking"]["params"]["b
 ```
 cat $HOME/.hid-node/config/genesis.json | jq '.app_state["ssi"]["chain_namespace"]="jagrat"' > $HOME/.hid-node/config/tmp_genesis.json && mv $HOME/.hid-node/config/tmp_genesis.json $HOME/.hid-node/config/genesis.json
 ```
-- Create a gentx transaction
+- Create a gentx account
 ```
 hid-noded add-genesis-account <key-name> 10000000000000uhid
+```
+- Create a gentex transaction
+```
 hid-noded gentx <key-name> 1000000000000uhid \
 --chain-id jagrat \
 --moniker="<validator-name>" \
@@ -89,13 +92,13 @@ hid-noded gentx <key-name> 1000000000000uhid \
 --website="XXXXXXXX"
 ```
 - Copy the contents of `${HOME}/.hid-node/config/gentx/gentx-XXXXXXXX.json`.
-- Fork the [repository](https://github.com/hypersign-protocol/networks)
+- Fork the [repository](https://github.com/hypersign-protocol/launch)
 - Create a file `gentx-<validator-name>.json` under the `testnet/jagrat/gentxs` folder in the forked repo and paste the copied text into the file.
 - Run `hid-noded tendermint show-node-id` and copy your Node ID.
 - Run `ifconfig` or `curl ipinfo.io/ip` and copy your publicly reachable IP address.
 - Form the complete node address in the format: `<node-id>@<publicly-reachable-ip>:<p2p-port>`
 - Create a file `peers-<validator-name>.json` under the `testnet/jagrat/peers` directory in the forked repo and paste the copied text from the last step into the file.
-- Create a Pull Request to the `master` branch of the [repository](https://github.com/hypersign-protocol/networks)
+- Create a Pull Request to the `master` branch of the [repository](https://github.com/hypersign-protocol/launch)
 >**NOTE:** Pull Request will be merged by the maintainers to confirm the inclusion of the validator at the genesis. The final genesis file will be published under the file `testnet/jagrat/final_genesis.json`.
 - Once the `final_genesis.json` file is published, replace the contents of your `${HOME}/.hid-node/config/genesis.json` with that of `testnet/jagrat/final_genesis.json`.
 - Add `persistent_peers` or `seeds` in `${HOME}/.hid-node/config/config.toml` from `testnet/jagrat/final_peers.json`.
