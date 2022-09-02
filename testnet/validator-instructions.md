@@ -44,11 +44,11 @@ hid-noded version
 
 ## Generate Keys
 
-`hid-noded keys add <key-name>`
+`hid-noded keys add <key-name> --keyring-backend test`
 
 or
 
-`hid-noded keys add <key-name> --recover` to regenerate keys with your [BIP39](https://github.com/bitcoin/bips/tree/master/bip-0039) mnemonic
+`hid-noded keys add <key-name> --keyring-backend test --recover` to regenerate keys with your [BIP39](https://github.com/bitcoin/bips/tree/master/bip-0039) mnemonic
 
 ## Validator setup
 
