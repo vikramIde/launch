@@ -90,6 +90,7 @@ hid-noded gentx <key-name> 1000000000000uhid \
 --details="XXXXXXXX" \
 --security-contact="XXXXXXXX" \
 --website="XXXXXXXX"
+--keyring-backend test
 ```
 - Copy the contents of `${HOME}/.hid-node/config/gentx/gentx-XXXXXXXX.json`.
 - Fork the [repository](https://github.com/hypersign-protocol/launch)
