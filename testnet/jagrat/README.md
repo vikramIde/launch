@@ -44,11 +44,11 @@ hid-noded version
 
 ## Generate Keys
 
-`hid-noded keys add <key-name> --keyring-backend test`
+`hid-noded keys add <key-name>`
 
 or
 
-`hid-noded keys add <key-name> --keyring-backend test --recover` to regenerate keys with your [BIP39](https://github.com/bitcoin/bips/tree/master/bip-0039) mnemonic
+`hid-noded keys add <key-name> --recover` to regenerate keys with your [BIP39](https://github.com/bitcoin/bips/tree/master/bip-0039) mnemonic
 
 ## Validator setup
 
@@ -79,7 +79,7 @@ cat $HOME/.hid-node/config/genesis.json | jq '.app_state["ssi"]["chain_namespace
 ```
 - Create a gentx account
 ```
-hid-noded add-genesis-account <key-name> 10000000000000uhid --keyring-backend test
+hid-noded add-genesis-account <key-name> 10000000000000uhid
 ```
 - Create a gentex transaction
 ```
@@ -92,8 +92,7 @@ hid-noded gentx <key-name> 1000000000000uhid \
 --min-self-delegation=500000000000 \
 --details="XXXXXXXX" \
 --security-contact="XXXXXXXX" \
---website="XXXXXXXX" \
---keyring-backend test
+--website="XXXXXXXX"
 ```
 - Copy the contents of `${HOME}/.hid-node/config/gentx/gentx-XXXXXXXX.json`.
 - Fork the [repository](https://github.com/hypersign-protocol/launch)
