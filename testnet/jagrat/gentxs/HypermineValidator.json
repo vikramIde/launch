@@ -1,0 +1,61 @@
+{
+  "body": {
+    "messages": [
+      {
+        "@type": "/cosmos.staking.v1beta1.MsgCreateValidator",
+        "description": {
+          "moniker": "Hypermine Cosmos Validator Service",
+          "identity": "",
+          "website": "https://hypermine.in",
+          "security_contact": "vikrambanand@gmai.com",
+          "details": "WIN HIGHREWARD 💰"
+        },
+        "commission": {
+          "rate": "0.100000000000000000",
+          "max_rate": "1.000000000000000000",
+          "max_change_rate": "0.100000000000000000"
+        },
+        "min_self_delegation": "500000000000",
+        "delegator_address": "hid1q8m0kztfj6fq8ffk0l99plnv3gg2du7nzgndus",
+        "validator_address": "hidvaloper1q8m0kztfj6fq8ffk0l99plnv3gg2du7na2y850",
+        "pubkey": {
+          "@type": "/cosmos.crypto.ed25519.PubKey",
+          "key": "lXdiRkRTqOdMpTQu6gkUYodf5AZ+sR1CuHLHbmyKQ2Y="
+        },
+        "value": {
+          "denom": "uhid",
+          "amount": "1000000000000"
+        }
+      }
+    ],
+    "memo": "363c33a2a847f22e439b3c36da66d15fb087e0c1@192.168.29.206:26656",
+    "timeout_height": "0",
+    "extension_options": [],
+    "non_critical_extension_options": []
+  },
+  "auth_info": {
+    "signer_infos": [
+      {
+        "public_key": {
+          "@type": "/cosmos.crypto.secp256k1.PubKey",
+          "key": "A4d7onMMEdAfWfQd9thYzabsc6Tg5auevwiZ+gjFYxlV"
+        },
+        "mode_info": {
+          "single": {
+            "mode": "SIGN_MODE_DIRECT"
+          }
+        },
+        "sequence": "0"
+      }
+    ],
+    "fee": {
+      "amount": [],
+      "gas_limit": "200000",
+      "payer": "",
+      "granter": ""
+    }
+  },
+  "signatures": [
+    "VxeY/njeI04bi8yzUcfn+tYd6a0eXr5xISkxWmrmSrValzn6WHcYIbEM+QHen8r/oVoI1Z91zfVF8r17/cPkCg=="
+  ]
+}
